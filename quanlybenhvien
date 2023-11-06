@@ -90,21 +90,21 @@ class THUOC()
         if (soluongcanmua <= soluong) 
         {
             soluong -= soluongcanmua;
-            System.out.println("Đã mua " + soluongcanmua + " viên " + ten + ".");
+            System.out.println("Đã mua " + soluongcanmua + " viên " + ten );
         }else{
             System.out.println("Không đủ số lượng " + ten + " trong kho.");
         }
     }
     public void nhap()
     {
-        System.out.println("Ho ten benh nhan: ");
+        System.out.println("Ten thuoc can mua: ");
         Scanner sc = new Scanner (System.in);
         ten = sc.nextLine();
-        System.out.println("Nhap ngay thang nam sinh: ");
+        System.out.println("Cong thuc cua thuoc: ");
         congthuc = sc.nextLine();
-        System.out.println("Nhap dia chi: ");
+        System.out.println("So luong can mua: ");
         soluong = sc.nextInt();
-        System.out.println("Nhap ma bao hiem neu co: ");
+        System.out.println("Gia cua "+ten+": ");
         gia = sc.nextDouble();
     }
     public void xuat()
