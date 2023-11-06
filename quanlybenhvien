@@ -72,9 +72,48 @@ class PHIEUKHAMBENH
 {
 
 }
-class THUOC
+class THUOC()
 {
-
+    private String ten;
+    private String congthuc;
+    private double gia;
+    private int soluong;
+    public THUOC(String ten, String congthuc, double gia, int soluong)
+    {
+        this.ten = ten;
+        this.congthuc = congthuc;
+        this.gia = gia;
+        this.soluong = soluong;
+    }
+    public void muaThuoc(int soluongcanmua) 
+    {
+        if (soluongcanmua <= soluong) 
+        {
+            soluong -= soluongcanmua;
+            System.out.println("Đã mua " + soluongcanmua + " viên " + ten + ".");
+        }else{
+            System.out.println("Không đủ số lượng " + ten + " trong kho.");
+        }
+    }
+    public void nhap()
+    {
+        System.out.println("Ho ten benh nhan: ");
+        Scanner sc = new Scanner (System.in);
+        ten = sc.nextLine();
+        System.out.println("Nhap ngay thang nam sinh: ");
+        congthuc = sc.nextLine();
+        System.out.println("Nhap dia chi: ");
+        soluong = sc.nextInt();
+        System.out.println("Nhap ma bao hiem neu co: ");
+        gia = sc.nextDouble();
+    }
+    public void xuat()
+    {
+        System.out.println("Tên thuốc: " + ten);
+        System.out.println("Công thức: " + congthuc);
+        System.out.println("Giá: " + gia + " VNĐ");
+        System.out.println("Số lượng hiện có: " + soluong);
+    }
 }
 class XETNGHIEM
 {
