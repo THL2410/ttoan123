@@ -50,7 +50,25 @@ private int age;
 }
 class BACSI
 {
+    private String tenbacsi;
+    private String chuyenkhoa;
+    private String sodienthoai;
 
+    public BACSI(String tenbacsi, String chuyenkhoa, String sodienthoai) {
+        this.tenbacsi = tenbacsi;
+        this.chuyenkhoa = chuyenkhoa;
+        this.sodienthoai = sodienthoai;
+    }
+    public void nhap()
+    {
+        Scanner sc= new Scanner (System.in);
+        System.out.print("Ten bac si: ");
+        tenbacsi=sc.nextLine();
+        System.out.print("Chuyen khoa: ");
+        chuyenkhoa=sc.nextLine();
+        System.out.print("So dien thoai lien he: ");
+        sodienthoai=sc.nextLine();
+    }
 }
 class YTA
 {
